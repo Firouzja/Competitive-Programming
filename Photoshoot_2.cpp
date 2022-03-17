@@ -11,19 +11,19 @@ int main() {
   set<int> setA, setB;
   map<int,set<int>> mapA, mapB;
   for (int i = n - 1; i >= 0; i--) {
-	mapA[a[i]] = setA;
-	mapB[b[i]] = setB;
+    mapA[a[i]] = setA;
+    mapB[b[i]] = setB;
     setA.insert(a[i]);	
-	setB.insert(b[i]);
+    setB.insert(b[i]);
   } 
   int ans = 0;
   for (int i : a) {
-	for (int j : mapB[i]) {
-	  if (!mapA[i].count(j)) {
-		ans++;
-		break;
-	  }
-	}
+    for (int j : mapB[i]) {
+      if (!mapA[i].count(j)) {
+        ans++;
+	break;
+      }
+    }
   }
   cout << ans << "\n";
 }
