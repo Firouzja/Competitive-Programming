@@ -15,7 +15,7 @@ int solve() {
 	bool good = true;
 	for (int j = i + 1; j < n; j++) {
 	  curSum += v[j];
-      curMods++;
+          curMods++;
 	  if (curSum > curTarget) {
 		good = false;
 		break;
@@ -37,6 +37,6 @@ int main() {
   int t;
   cin >> t;
   while (t--) {
-	cout << solve() << "\n";
+    cout << solve() << "\n";
   }
 }
